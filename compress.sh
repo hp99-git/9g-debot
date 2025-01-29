@@ -7,7 +7,7 @@ new Function(new TextDecoder().decode(new Uint8Array(await new Blob(chunks).arra
 chunks = null;
 EOF
 
-cat << EOF > ./tampermonkey/9g-debot.user.js
+cat << EOF > ./dist/9g-debot.user.js
 // ==UserScript==
 // @name         9g Debot
 // @namespace    https://github.com/hp99-git/9g-debot
@@ -16,8 +16,8 @@ cat << EOF > ./tampermonkey/9g-debot.user.js
 // @author       https://github.com/hp99-git
 // @match        https://9gag.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=9gag.com
-// @updateURL    https://github.com/hp99-git/9g-debot/raw/refs/heads/main/tampermonkey/9g-debot.user.js
-// @downloadURL  https://github.com/hp99-git/9g-debot/raw/refs/heads/main/tampermonkey/9g-debot.user.js
+// @updateURL    https://github.com/hp99-git/9g-debot/raw/refs/heads/tampermonkey/9g-debot.user.js
+// @downloadURL  https://github.com/hp99-git/9g-debot/raw/refs/heads/tampermonkey/9g-debot.user.js
 // @run-at       document-start
 // @grant        none
 // ==/UserScript==

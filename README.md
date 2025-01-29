@@ -11,7 +11,7 @@ It has been designed and tested to work with Chromium-based browsers (recommend 
 ### Installation Methods
 1. Tampermonkey (**recommended**).
    - Automatically keeps the application up to date and no console pasting involved.
-   - Latest userscript can be found here: https://github.com/hp99-git/9g-debot/raw/refs/heads/main/tampermonkey/9g-debot.user.js
+   - Latest userscript can be found here: https://github.com/hp99-git/9g-debot/raw/refs/heads/tampermonkey/9g-debot.user.js
 1. Prebuilt Release & Browser Console.
    - Download a release: https://github.com/hp99-git/9g-debot/releases
    - Extract, open `9g-debot.js` and copy its contents.
@@ -24,7 +24,7 @@ It has been designed and tested to work with Chromium-based browsers (recommend 
    - Download and extract the code, then:
      - `npm i`
      - `npm run build`
-   - You'll then find `app.js` (uncompressed version) and `9g-debot.js` (gzip version) in the `dist` directory as well as `9g-debot.user.js` in the Tampermonkey directory.
+   - You'll then find `app.js` (console/uncompressed version), `9g-debot.js` (console/gzip version) and `9g-debot.user.js` (tampermonkey/uses gzip version) in the `dist` directory.
    - Run the app the same way as method #1 or #2 above.
 
 ### Inject Via Console Example:
