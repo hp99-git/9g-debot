@@ -12,7 +12,7 @@ cat << EOF > ./tampermonkey/9g-debot.user.js
 // @name         9g Debot
 // @namespace    https://github.com/hp99-git/9g-debot
 // @version      0.0.1
-// @description  Scan post creators for abnormal activity.
+// @description  Help detect and block content spammers on the site.
 // @author       https://github.com/hp99-git
 // @match        https://9gag.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=9gag.com

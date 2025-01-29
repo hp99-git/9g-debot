@@ -2,7 +2,6 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 525px;
     height: 100vh;
     color: #fff;
     background-color: #333;
@@ -127,7 +126,10 @@
     }
 
     .version {
-        color: #ffc0cb;
+        position: absolute;
+        right: 10px;
+        color: #000000;
+        vertical-align: top;
     }
 
     .attention {

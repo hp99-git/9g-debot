@@ -60,7 +60,7 @@ const App = () => {
     const render = () => {
         if (isLoggedOut) {
             return (
-                <div style={{ display: isAppVisible ? "block" : "none" }}>
+                <div style={{ width: "525px", display: isAppVisible ? "block" : "none" }}>
                     You do not appear to be logged into the site.
                     <br />
                     <br />
@@ -71,29 +71,14 @@ const App = () => {
 
         if (isLoading) {
             return (
-                <div style={{ display: isAppVisible ? "block" : "none" }}>
+                <div style={{ width: "525px", display: isAppVisible ? "block" : "none" }}>
                     <h3>Loading your current block list...</h3>
                 </div>
             );
         }
 
         return (
-            <div style={{ display: isAppVisible ? "block" : "none" }}>
-                <div class="top-spacing">
-                    <span>
-                        <span class="version">v0.0.1</span> (
-                    </span>
-                    <a
-                        href="https://search.brave.com"
-                        target="_blank"
-                        onClick={(e) => {
-                            e.stopPropagation();
-                        }}
-                    >
-                        Check for new version on GitHub
-                    </a>
-                    <span>)</span>
-                </div>
+            <div style={{ width: "525px", display: isAppVisible ? "block" : "none" }}>
                 <div class="top-spacing tab-group">
                     <button
                         type="button"
@@ -168,6 +153,7 @@ const App = () => {
                 <span style={{ verticalAlign: "top", paddingRight: "5px" }}>🤖</span>
                 <span style={{ verticalAlign: "middle" }}>9G Debot App</span>
                 <span style={{ verticalAlign: "top", paddingLeft: "5px" }}>🤖</span>
+                <span class="version">v0.0.1</span>
             </div>
             {render()}
         </section>

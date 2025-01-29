@@ -2,7 +2,26 @@ const About = () => {
     const render = () => {
         return (
             <section>
-                <div>
+                <div style={{ fontStyle: "italic" }}>
+                    <span style={{ verticalAlign: "middle", color: "#add8e6", marginRight: "5px" }}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+                        </svg>
+                    </span>
+                    <span>Either use the Tampermonkey installation method to keep this app up to date automatically or manually check for new versions on </span>
+                    <a
+                        href="https://github.com/hp99-git/9g-debot"
+                        target="_blank"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                        }}
+                    >
+                        GitHub
+                    </a>
+                    {"."}
+                    <hr />
+                </div>
+                <div class="top-spacing">
                     This application will listen for posts being dynamically loaded by the site. If you initialized this app on an already loaded page, you may need to scroll before you'll see users
                     start to queue.
                 </div>
@@ -24,6 +43,7 @@ const About = () => {
                         </svg>
                     </span>
                     <cite>If you manually view the creators profile you may notice a mismatch in post counts. This is due to down votes causing posts to be hidden.</cite>
+                    <hr />
                 </div>
                 <div class="top-spacing">As you sort through the data in the &ldquo;Scanned&rdquo; tab, it will be fairly obvious which accounts are likely bots flooding the site with content.</div>
                 <div class="top-spacing">
@@ -34,8 +54,10 @@ const About = () => {
                         </svg>
                     </span>
                     <span> icon to add that user to your block list.</span>
+                    <hr />
                 </div>
-                <div class="top-spacing attention">No data is saved between refreshes. Simply reload the page to remove this app or to start over.</div>
+                <div class="top-spacing attention">Scan data is not saved between hard page refreshes! Simply reload the page to clear and start over.</div>
+                <div class="top-spacing attention">To remove this app, disable the userscript in Tampermonkey (if you used that installation method) and refresh the page.</div>
             </section>
         );
     };
