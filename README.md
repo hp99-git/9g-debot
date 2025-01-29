@@ -14,7 +14,7 @@ It has been designed and tested to work with Chromium-based browsers (recommend 
    - Latest userscript can be found here: https://github.com/hp99-git/9g-debot/raw/refs/heads/main/tampermonkey/9g-debot.user.js
 1. Prebuilt Release & Browser Console.
    - Download a release: https://github.com/hp99-git/9g-debot/releases
-   - Extract and open either `app.js` or the compressed version `app-gzip.js` (exactly the same, just smaller to copy/paste). 
+   - Extract, open `9g-debot.js` and copy its contents.
    - In your browser, navigate to the site, hit F12 to open your developer tools, switch to the "Console" tab, paste in the contents and hit enter.
    - The app will load on the right side of the screen and you can then close the developer tools.
 1. Build it Yourself.
@@ -24,5 +24,5 @@ It has been designed and tested to work with Chromium-based browsers (recommend 
    - Download and extract the code, then:
      - `npm i`
      - `npm run build`
-   - You'll then find `app.js` and `app-gzip.js` in the `dist` directory as well as `9g-debot.user.js` in the Tampermonkey directory.
+   - You'll then find `app.js` (uncompressed version) and `9g-debot.js` (gzip version) in the `dist` directory as well as `9g-debot.user.js` in the Tampermonkey directory.
    - Run the app the same way as method #1 or #2 above.
