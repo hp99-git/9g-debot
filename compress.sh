@@ -1,4 +1,4 @@
-cat << EOF > ./dist/app-gzip.js
+cat << EOF > ./dist/9g-debot.js
 const gzipBase64String = "$(cat ./dist/app.js | gzip --best | base64 -w 0 -)";
 const stream = new Blob([Uint8Array.from(atob(gzipBase64String), c => c.charCodeAt(0))]).stream();
 let chunks = [];
