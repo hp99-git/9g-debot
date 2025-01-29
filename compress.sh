@@ -7,7 +7,7 @@ new Function(new TextDecoder().decode(new Uint8Array(await new Blob(chunks).arra
 chunks = null;
 EOF
 
-cat << EOF > ./dist/9g-debot.user.js
+cat << EOF > ./tampermonkey/9g-debot.user.js
 // ==UserScript==
 // @name         9g Debot
 // @namespace    https://github.com/hp99-git/9g-debot
@@ -36,3 +36,4 @@ cat << EOF > ./dist/9g-debot.user.js
 
     load();
 })();
+EOF
