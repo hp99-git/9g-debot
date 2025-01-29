@@ -6,6 +6,8 @@
 // @author       https://github.com/hp99-git
 // @match        https://9gag.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=9gag.com
+// @updateURL    https://github.com/hp99-git/9g-debot/raw/refs/heads/main/tampermonkey/9g-debot.user.js
+// @downloadURL  https://github.com/hp99-git/9g-debot/raw/refs/heads/main/tampermonkey/9g-debot.user.js
 // @run-at       document-start
 // @grant        none
 // ==/UserScript==
