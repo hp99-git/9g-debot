@@ -1,10 +1,16 @@
 cat << EOF > ./dist/9g-debot.js
-const gzipBase64String = "$(cat ./dist/app.js | gzip --best | base64 -w 0 -)";
-const stream = new Blob([Uint8Array.from(atob(gzipBase64String), c => c.charCodeAt(0))]).stream();
-let chunks = [];
-for await (const chunk of stream.pipeThrough(new DecompressionStream("gzip"))) chunks.push(chunk);
-new Function(new TextDecoder().decode(new Uint8Array(await new Blob(chunks).arrayBuffer())))();
-chunks = null;
+(function() {
+    const load = async function () {
+        const gzipBase64String = "$(cat ./dist/app.js | gzip --best | base64 -w 0 -)";
+        const stream = new Blob([Uint8Array.from(atob(gzipBase64String), c => c.charCodeAt(0))]).stream();
+        let chunks = [];
+        for await (const chunk of stream.pipeThrough(new DecompressionStream("gzip"))) chunks.push(chunk);
+        new Function(new TextDecoder().decode(new Uint8Array(await new Blob(chunks).arrayBuffer())))();
+        chunks = null;
+    }
+
+    load();
+})();
 EOF
 
 cat << EOF > ./dist/9g-debot.user.js
