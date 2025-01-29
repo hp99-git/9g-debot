@@ -26,3 +26,6 @@ It has been designed and tested to work with Chromium-based browsers (recommend 
      - `npm run build`
    - You'll then find `app.js` (uncompressed version) and `9g-debot.js` (gzip version) in the `dist` directory as well as `9g-debot.user.js` in the Tampermonkey directory.
    - Run the app the same way as method #1 or #2 above.
+
+### Inject Via Console Example:
+![Console Loading](assets/console-example.gif)
